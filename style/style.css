@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: #000;
+    --second-text-color: #7d7f81;
+    --accent-btn-color: #2481cc;
+    --accent-color-hover: #1a8ad5;
+    --body-bg: #fff;
+    --box-bg: #fff;
+    --box-bg-blured: rgba(255, 255, 255, 0.84);
+    --tme-logo-color: #363b40;
+    --accent-link-color: #2481cc;
+    --blue: #0088cc;
+}
+
+body {
+    background: var(--body-bg);
+    overflow-x: hidden;
+}
+
+body .nav{
+    height: 50px;
+}
+
+hr {
+    border: .0001rem solid rgb(208, 208, 208);
+}
+
+.nav .box_link ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav .box_link ul li {
+    list-style: none;
+    padding: 15px 15px 15px 15px;
+}
+
+.box_link ul li a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 400;
+    padding: 10px 15px;
+}
+
+.box_link ul li a::after {
+    display: block;
+    height: 3px;
+    width: 140%;
+    background: #179cde;
+    position: relative;
+    content: "";
+    top: 11px;
+    left: -4px;
+    right: 4px;
+    transform-origin: bottom;
+    transform: scaleX(0.3) scaleY(0);
+    transition: 200ms;
+}
+
+.box_link ul li a:hover::after {
+    transform: scaleX(1.0) scaleY(1.0);
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
